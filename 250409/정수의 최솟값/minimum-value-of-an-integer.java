@@ -1,11 +1,12 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int sum(int a, int b, int c) {
+     public static int getMin(int a, int b, int c) {
         int min = a;
-        if(min >= b) {
+        if (b < min) {
             min = b;
-        } else if(min >= c) {
+        }
+        if (c < min) {
             min = c;
         }
         return min;
@@ -16,6 +17,7 @@ public class Main {
         int b = sc.nextInt();
         int c = sc.nextInt();
         // Please write your code here.
-        System.out.print(sum(a,b,c));
+        int result = getMin(a, b, c);
+        System.out.println(result);
     }
 }
